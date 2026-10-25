@@ -1,15 +1,10 @@
 import { ArrowLeft, ArrowRight, FrameCorners, SquaresFour } from '@phosphor-icons/react';
 import D from '../data/galeria.js';
-import { ARTISTS, WORK_BY_ID, describeWork, pad2, paint, scrollToId, splitName, torn } from '../lib/art.js';
+import { ARTISTS, WORK_BY_ID, describeWork, pad2, paint, splitName, torn } from '../lib/art.js';
 import { useGallery } from '../lib/gallery.js';
 import { portraitImage } from '../lib/images.js';
 import { MURAL_BASES, MURAL_OFFSETS, THEMES, VPAL } from '../lib/theme.js';
 import Artwork from '../components/Artwork.jsx';
-
-const TOC = [
-  ['biografia', 'Biografia'], ['linha-do-tempo', 'Linha do tempo'], ['estilo', 'Estilo'], ['obras', 'Obras'],
-  ['curiosidades', 'Curiosidades'], ['legado', 'Legado'], ['referencias', 'Referências']
-];
 
 const TORN = { A: torn(1, 1.6), B: torn(2), C: torn(3, 1), D: torn(4, 1), E: torn(5), F: torn(6, 2.2) };
 
@@ -80,14 +75,6 @@ export default function Artist({ artist: a }) {
           {narrow ? <HeroNarrow {...hero} /> : <HeroWide {...hero} />}
         </div>
       </section>
-
-      <nav aria-label="Seções da página" className="toc">
-        <div className="wrap toc__inner">
-          {TOC.map(([id, label]) => (
-            <a key={id} href={'#' + id} onClick={(e) => { e.preventDefault(); scrollToId(id, 70); }} className="toc__link">{label}</a>
-          ))}
-        </div>
-      </nav>
 
       <Newspaper a={a} num={num} VP={VP} bio={bio} f1={picks.f1} f2={picks.f2} />
       <Timeline a={a} ids={ids} works={works} />

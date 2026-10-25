@@ -410,10 +410,6 @@ main:focus { outline: none; }
 .torn-card__caption { all: unset; cursor: pointer; display: block; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: #3a2a1a; padding-top: 7px; min-height: 24px; }
 .torn-card__caption:hover { color: var(--v-main); }
 
-.toc { position: sticky; top: 64px; z-index: 30; background: var(--cream); box-shadow: 0 1px 0 var(--line); }
-.toc__inner { padding-top: 10px; padding-bottom: 10px; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
-.toc__link { flex: none; font-size: 14px; font-weight: 700; color: var(--ink); text-decoration: none; padding: 8px 12px; border: 1px solid var(--line); background: var(--paper); min-height: 40px; display: inline-flex; align-items: center; }
-.toc__link:hover { background: var(--t-bg); color: var(--t-ink); }
 
 .newspaper { background: var(--paper); }
 .newspaper__inner { max-width: 1200px; margin: 0 auto; padding: clamp(48px, 7vw, 96px) var(--gutter); }
